@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nathan Trumbull's portfolio showcasing web development projects and career goals.">
+    <title>Portfolio - Nathan Trumbull</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #2F4F4F; /* Slate Grey */
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF; /* White */
+        }
+        
+        header {
+            background-color: #B22222; /* Firebrick (Red) */
+            color: #FFFFFF; /* White */
+            padding: 10px 0;
+            text-align: center;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: #FFFFFF; /* White */
+            text-decoration: none;
+        }
+        
+        main {
+            padding: 20px;
+            background-color: #FFFFFF; /* White */
+            min-height: calc(100vh - 120px); /* Increased height adjustment */
+            padding-bottom: 70px; /* Increased padding to ensure content isn't hidden */
+        }
+        
+        h1, h2, h3 {
+            color: #FF8C00; /* Dark Orange */
+        }
+        
+        footer {
+            background-color: #2F4F4F; /* Slate Grey */
+            color: #FFFFFF; /* White */
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+        }
+        
+        img {
+            max-width: 50%; /* Reducing the image width by 50% */
+            height: auto;
+        }
+        
+        .project img.space-needle {
+            max-width: 25%; /* Reducing the Space Needle image by 75% */
+            height: auto;
+        }
+
+        .project {
+            border: 1px solid #FF4500; /* Orange Red (Burnt Orange) */
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #F5F5F5; /* Light Grey */
+        }
+
+        .page {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nathan Trumbull</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('portfolio')">Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="home" class="page active">
+            <section id="intro">
+                <h2>About Me</h2>
+                <p>I am a college student on my way to a bachelor's in Digital Marketing. I enjoy cars, video games, fitness, and fashion. I plan to further pursue a career in digital marketing, and live a remote lifestyle to best suit my work-life balance.</p>
+                <p>Contact: nate4hun@outlook.com | Maple Valley, Washington</p>
+            </section>
+            <section id="photo">
+                <img src="https://i.imgur.com/A0Gu3HN.jpeg" alt="Nathan Trumbull's Photo">
+            </section>
+            <section id="concepts">
+                <h2>Key Concepts Learned</h2>
+                <p>Throughout my studies, I've learned important concepts such as responsive design, semantic HTML, and effective use of CSS for creating visually appealing and accessible websites. Website making is not just about visuals; it's about crafting an engaging and functional user experience.</p>
+            </section>
+        </div>
+        <div id="portfolio" class="page">
+            <section id="projects">
+                <h2>My Web Projects</h2>
+                <article class="project">
+                    <h3>Lab 3</h3>
+                    <p>A project that focuses on beginner HTML and CSS, emphasizing basic JavaScript, and providing a detailed review of one of my favorite cars.</p>
+                   <a href="https://i.imgur.com/YeFmO3q.jpeg" target="_blank">
+    <img src="https://i.imgur.com/YeFmO3q.jpeg" alt="Nathan Trumbull's Photo" style="max-width: 25%; height: auto;">
+</a>
+                    <a href="https://nate4hun.github.io/lab-3/" target="_blank">View Project</a>
+                </article>
+                <article class="project">
+                    <h3>Project 1</h3>
+                    <p>A basic text-based structure that outlines your portfolio information.</p>
+                    <a href="https://nate4hun.github.io/project-1/" target="_blank">View Project</a>
+                </article>
+                <article class="project">
+                    <h3>Project 3</h3>
+                    <p>An advanced project focused on usability of a website. This showcases my favorite city, Seattle, and its wonderful attractions.</p>
+                    <a href="https://i.imgur.com/80fHP5P.jpeg" target="_blank">
+                        <img src="https://i.imgur.com/80fHP5P.jpeg" alt="Space Needle Photo" class="space-needle">
+                    </a>
+                    <a href="https://nate4hun.github.io/project-3/" target="_blank">View Project</a>
+                </article>
+                <article class="project">
+                    <h3>Project 5</h3>
+                    <p>A full website and review page showcasing my favorite video games on the Nintendo Switch console. This project focuses mostly on design and organization. It also implements the use of embedded videos.</p>
+                 <a href="https://i.imgur.com/toDJHfO.jpeg" target="_blank">
+    <img src="https://i.imgur.com/toDJHfO.jpeg" alt="Nathan Trumbull's Photo" style="max-width: 25%; height: auto;">
+</a>
+                    <a href="https://nate4hun.github.io/project-5/" target="_blank">View Project</a>
+                </article>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Nathan Trumbull</p>
+    </footer>
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(function(page) {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
+
+
+
+
